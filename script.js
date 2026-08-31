@@ -66,11 +66,20 @@ function rangeEnd(s){
   const parts=s.split("–");
   return parts.length>1 ? minutes(parts[1]) : null;
 }
+function durationMinutes(time){
+  const parts = time.split("–");
+  if(parts.length < 2) return 0;
+  const start = minutes(parts[0]);
+  const end = minutes(parts[1]);
+  if(start === null || end === null) return 0;
+  return Math.max(0, end - start);
+}
 function taskClass(name){
   const n=name.toLowerCase();
   if(n.includes("perm")) return "PERM";
-  if(n.includes("hall") || n.includes("portail") || n.includes("couloir")|| n.includes("cour")|| n.includes("self")) return "SURVEILLANCE";
-  if(n.includes("repas")|| n.includes("passage")) return "REPAS";
+  if(n.includes("passage")) return "PASSAGE SELF";
+  if(n.includes("hall") || n.includes("portail") || n.includes("couloir")|| n.includes("self")|| n.includes("cour")) return "SURVEILLANCE";
+  if(n.includes("repas") ) return "REPAS";
   return "AUTRE";
 }
 function isCurrent(time){
@@ -96,7 +105,10 @@ function render(day){
     return `<div class="mission ${current?'current':''}">
       <div class="time">${time}</div>
       <div class="task">
-        <div class="task-name">${name}</div>
+        <div>
+          <div class="task-name">${name}</div>
+          <div class="duration">${durationMinutes(time)} min</div>
+        </div>
         <div class="task-tag ${current?'current-label':''}">${current?'EN COURS':taskClass(name)}</div>
       </div>
     </div>`;
