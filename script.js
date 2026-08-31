@@ -69,9 +69,8 @@ function rangeEnd(s){
 function taskClass(name){
   const n=name.toLowerCase();
   if(n.includes("perm")) return "PERM";
-  if(n.includes("cour")) return "COUR";
-  if(n.includes("hall") || n.includes("portail") || n.includes("couloir")) return "SURVEILLANCE";
-  if(n.includes("repas") || n.includes("self")) return "REPAS";
+  if(n.includes("hall") || n.includes("portail") || n.includes("couloir")|| n.includes("cour")|| n.includes("self")) return "SURVEILLANCE";
+  if(n.includes("repas")|| n.includes("passage")) return "REPAS";
   return "AUTRE";
 }
 function isCurrent(time){
