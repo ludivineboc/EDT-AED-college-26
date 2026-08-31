@@ -1,0 +1,91 @@
+:root{
+    --bg:#f3f4f6;
+    --card:#ffffff;
+    --text:#111827;
+    --muted:#6b7280;
+    --border:#e5e7eb;
+    --accent:#111827;
+    --shadow:0 10px 30px rgba(17,24,39,.08);
+  }
+  *{box-sizing:border-box}
+  body{
+    margin:0;
+    font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+    background:var(--bg);
+    color:var(--text);
+  }
+  .app{max-width:760px;margin:0 auto;padding:20px 14px 40px}
+  header{
+    background:linear-gradient(135deg,#111827,#374151);
+    color:white;border-radius:24px;padding:24px 22px;
+    box-shadow:var(--shadow);margin-bottom:16px;
+  }
+  .eyebrow{font-size:13px;opacity:.7;font-weight:700;text-transform:uppercase;letter-spacing:.08em}
+  h1{margin:5px 0 4px;font-size:30px;letter-spacing:-.03em}
+  #dateLabel{opacity:.8;font-size:14px}
+  .days{
+    display:grid;grid-template-columns:repeat(3,1fr);gap:8px;
+    margin-bottom:16px;
+  }
+  .day-btn{
+    border:1px solid var(--border);background:var(--card);color:var(--text);
+    border-radius:14px;padding:12px 8px;font-weight:800;cursor:pointer;
+    box-shadow:0 3px 10px rgba(0,0,0,.03);transition:.15s;
+  }
+  .day-btn.active{background:var(--accent);color:white;border-color:var(--accent)}
+  .day-btn small{display:block;font-size:11px;font-weight:600;opacity:.65;margin-top:2px}
+  .panel{
+    background:var(--card);border:1px solid var(--border);
+    border-radius:22px;box-shadow:var(--shadow);overflow:hidden;
+  }
+  .panel-head{padding:18px 18px 14px;border-bottom:1px solid var(--border)}
+  .panel-head h2{margin:0;font-size:22px}
+  .panel-head p{margin:4px 0 0;color:var(--muted);font-size:13px}
+  .schedule{padding:8px}
+  .mission{
+    display:grid;grid-template-columns:105px 1fr;gap:12px;
+    align-items:stretch;margin:6px 0;
+  }
+  .time{
+    display:flex;align-items:center;justify-content:center;
+    text-align:center;background:#f9fafb;border:1px solid var(--border);
+    border-radius:14px;font-weight:800;font-size:14px;line-height:1.2;
+    padding:10px 6px;min-height:62px;
+  }
+  .task{
+    border-radius:14px;padding:12px 14px;min-height:62px;
+    display:flex;align-items:center;justify-content:space-between;gap:10px;
+    background:#f9fafb;border:1px solid var(--border);
+  }
+  .task-name{font-weight:800;font-size:16px}
+  .task-tag{
+    flex:none;font-size:10px;font-weight:800;text-transform:uppercase;
+    letter-spacing:.05em;padding:5px 7px;border-radius:999px;background:#e5e7eb;color:#374151
+  }
+  .mission.current .time,.mission.current .task{
+    outline:2px solid #111827;outline-offset:-2px;
+  }
+  .mission.current .task{background:#eef2ff}
+  .current-label{background:#111827;color:white}
+  .empty{
+    padding:42px 20px;text-align:center;color:var(--muted)
+  }
+  .empty .icon{font-size:42px;margin-bottom:8px}
+  .empty h3{margin:0 0 5px;color:var(--text);font-size:21px}
+  .empty p{margin:0}
+  .legend{
+    margin-top:12px;color:var(--muted);font-size:12px;text-align:center
+  }
+  .footer{
+    margin-top:14px;text-align:center;color:var(--muted);font-size:11px
+  }
+  @media(max-width:480px){
+    .app{padding:12px 10px 30px}
+    header{padding:20px;border-radius:20px}
+    h1{font-size:26px}
+    .mission{grid-template-columns:88px 1fr;gap:8px}
+    .time{font-size:12px}
+    .task{padding:11px 10px}
+    .task-name{font-size:14px}
+    .task-tag{display:none}
+  }
