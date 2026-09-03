@@ -3,14 +3,16 @@ const schedules = {
     ["10h55", "Hall"],
     ["10h55–11h25", "Perm 1"],
     ["11h25–11h55", "REPAS"],
-    ["11h55–12h30", "Passage self"],
+    ["11h55–12h30", "Cours basket"],
     ["12h30–13h00", "Cour WC"],
     ["13h00–13h25", "SELF"],
-    ["13h25–13h30", "Hall"],
+    ["13h25–13h30", "Cour"],
     ["13h30–14h25", "Perm 3 ou suivi élèves"],
     ["14h25", "Portail loge"],
     ["14h25–15h20", "Perm 2"],
-    ["15h20–15h35", "Portail cour"]
+    ["15h20–15h35", "Portail cour"],
+    ["15h35–16h30", "Perm 1"],
+    ["16h30", "Portail cour"]
   ],
   jeudi: [
     ["9h50–10h05", "Cour"],
@@ -27,14 +29,13 @@ const schedules = {
     ["15h20–15h35", "Portail cour + cour"],
     ["15h35–16h30", "Perm 2"],
     ["16h30", "Portail cour"],
-    ["16h30–17h30", "Retenues"]
   ],
   vendredi: [
     ["7h40–7h55", "Cour"],
-    ["7h55–8h05", "Cour"],
-    ["8h05–8h55", "Perm 1"],
+    ["7h55–8h05", "Hall"],
+    ["8h05–8h55", "Perm 2"],
     ["8h55", "Hall"],
-    ["8h55–9h50", "Perm 2"],
+    ["8h55–9h50", "Perm 1"],
     ["9h50–10h05", "Cour WC"],
     ["10h05–11h00", "Perm 3 ou suivi élèves"],
     ["10h55–11h25", "REPAS"],
@@ -42,9 +43,9 @@ const schedules = {
     ["11h55–12h30", "Passage Self"],
     ["12h30–13h00", "Cour WC"],
     ["13h00–13h25", "SELF"],
-    ["13h25–13h30", "Hall"],
+    ["13h25–13h30", "Couloirs"],
     ["13h30–14h25", "Aide Bureau"],
-    ["14h25", "Couloirs"],
+    ["14h25", "Portail loge"],
     ["14h25–15h20", "Perm 3 ou suivi élèves"],
     ["15h20–15h35", "Portail cour"]
   ]
