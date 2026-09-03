@@ -77,7 +77,7 @@ function durationMinutes(time){
 function taskClass(name){
   const n=name.toLowerCase();
   if(n.includes("perm")) return "PERM";
-  if(n.includes("passage")) return "PASSAGE SELF";
+  if(n.includes("passage")) return "PASSAGE SELFenfin ";
   if(n.includes("hall") || n.includes("portail") || n.includes("couloir")|| n.includes("self")|| n.includes("cour")) return "SURVEILLANCE";
   if(n.includes("repas") ) return "REPAS";
   return "AUTRE";
